@@ -17,7 +17,10 @@ app.use(express.json());
 app.use(cookieParser());
 
 // Serve up the applications static content
-app.use(express.static('simon-websocket/public'));
+
+//for home computer (since I changed the filestructure)
+//app.use(express.static('simon-websocket/public'));
+app.use(express.static('public'));
 
 // Router for service endpoints
 var apiRouter = express.Router();
